@@ -1,6 +1,6 @@
 ---
 layout: post
-title: File path in Python project - Python中文件路径的设置
+title: File path in Python project - Python项目中文件路径的设置
 ---
 
 {{page.title}}
@@ -21,8 +21,7 @@ project
       |-- ...
 ```
 
-In `file_a1`, you need open `data_a`. Ok, it could be relative path.
-It would be something like:
+In `file_a1`, you need open `data_a`. Ok, it could be relative path. It would be something like:
 ```python
 # under file_a1.py
 def func_a1():
@@ -57,8 +56,7 @@ Under `root.py`, `func_a1` is invoked.
 from mod_a.file_a1 import func_a1
 
 if __name__ == '__main__':
-    # func_a1()
-    func_bb1()
+    func_a1()
 ```
 
 See what happens:
@@ -67,7 +65,7 @@ where `c:\usr\work` is the parent dir of the project in my example.
 
 As we can see, the relative path under `func_a` is now been applied to the working dir of `root.py`. Current working dir is `c:\usr\work\project`. When `func_a1` is executed, `os.path.pardir` is `c:\usr\work\`.
 
-The solution would be:
+The __solution__ would be:
 ```python
 # under file_a1.py
 def func_a1():

@@ -8,7 +8,7 @@ title: Test - First page test
 
 <p class="meta">Apr 10, 2017 - Shanghai</p>
 
-*** To be simple, to be sharing. ***
+##To be simple, to be sharing. ##
 
 
 

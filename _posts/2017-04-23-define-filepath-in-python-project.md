@@ -60,10 +60,12 @@ if __name__ == '__main__':
 ```
 
 See what happens:
-`IOError: [Errno 2] No such file or directory: 'c:\\usr\\work\\data_folder\\data_a'` 
+*`IOError: [Errno 2] No such file or directory: 'c:\\usr\\work\\data_folder\\data_a'`*
 where `c:\usr\work` is the parent dir of the project in my example. 
 
-As we can see, the relative path under `func_a` is now been applied to the working dir of `root.py`. Current working dir is `c:\usr\work\project`. When `func_a1` is executed, `os.path.pardir` is `c:\usr\work\`.
+As we can see, the relative path under `func_a` is now been applied to the working dir of `root.py`. 
+Current working dir is `c:\usr\work\project`. 
+When `func_a1` is executed, `os.path.pardir` is `c:\usr\work\`.
 
 The __solution__ would be:
 ```python
@@ -78,4 +80,5 @@ def func_a1():
     with open(fp, 'r') as ff:
         pass
 ```
-`os.path.dirname(__file__)` to get the dir of containing file `func_a1`. Note the sequence of dirs, `os.path.pardir` should be after current dir when join the dirs.
+`os.path.dirname(__file__)` to get the dir of containing file `func_a1`. 
+Note the sequence of dirs, `os.path.pardir` should be after current dir when join the dirs.

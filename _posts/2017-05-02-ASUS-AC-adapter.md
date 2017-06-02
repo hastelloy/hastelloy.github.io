@@ -3,7 +3,7 @@ layout: post
 title: ASUS ac adapter 
 categories: [Life, Computer]
 tags: [chromebook, computer]
-fullview: true
+fullview: false
 comments: true
 description: Chromebook Asus C300M..
 ---

@@ -3,7 +3,7 @@ layout: post
 title: File path in Python project - Python项目中文件路径的设置
 categories: [python]
 tags: [python, path]
-fullview: true
+fullview: false
 comments: true
 description: Organize the file path in Python project...
 ---

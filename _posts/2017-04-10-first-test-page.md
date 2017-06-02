@@ -3,7 +3,7 @@ layout: post
 title: Test - First page test
 categories: [general, test]
 tags: [test, setup]
-fullview: true
+fullview: false
 comments: true
 description: Firt test page created..
 ---

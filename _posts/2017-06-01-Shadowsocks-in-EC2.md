@@ -3,7 +3,7 @@ layout: post
 title: Shadowsocks in EC2
 categories: [VPN, EC2]
 tags: [AWS, Python, VPN, EC2]
-fullview: true
+fullview: false
 comments: true
 description: Setup Shadowsocks in AWS EC2..
 ---

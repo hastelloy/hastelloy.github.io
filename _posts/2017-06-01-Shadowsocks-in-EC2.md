@@ -1,11 +1,13 @@
 ---
 layout: post
 title: Shadowsocks in EC2
+categories: [VPN, EC2]
+tags: [AWS, Python, VPN, EC2]
+fullview: true
+comments: true
+description: Setup Shadowsocks in AWS EC2..
 ---
 
-
-{{page.title}}
-===============
 
 [Git source](https://github.com/ziggear/shadowsocks)
 
@@ -24,7 +26,7 @@ title: Shadowsocks in EC2
 ```
 
 To run in the foreground:
-    `ssserver -c /etc/shadowsocks.json`
+    ```ssserver -c /etc/shadowsocks.json```
 To run in the background:
-    `ssserver -c /etc/shadowsocks.json -d start`
-    `ssserver -c /etc/shadowsocks.json -d stop`
+    ```ssserver -c /etc/shadowsocks.json -d start```
+    ```ssserver -c /etc/shadowsocks.json -d stop```

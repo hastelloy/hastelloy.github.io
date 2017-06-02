@@ -1,10 +1,12 @@
 ---
 layout: post
 title: Test - First page test
+categories: [general, test]
+tags: [test, setup]
+fullview: true
+comments: true
+description: Firt test page created..
 ---
-
-{{page.title}}
-===============
 
 <p class="meta">Apr 10, 2017 - Shanghai</p>
 

@@ -1,10 +1,12 @@
 ---
 layout: post
 title: File path in Python project - Python项目中文件路径的设置
+categories: [python]
+tags: [python, path]
+fullview: true
+comments: true
+description: Organize the file path in Python project...
 ---
-
-{{page.title}}
-===============
 
 There are a bunch of data files to be accessed from different modules or submodules within the project. Normally, we would like to save the data files under a seperate folder from the executing code.
 

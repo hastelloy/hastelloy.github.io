@@ -10,7 +10,7 @@ title: Nginx + Gunicorn + Django
 [Gunicorn](http://docs.gunicorn.org/en/stable/deploy.html)
 [django using Gunicorn](https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/gunicorn/)
 
-
+--------------------------
 # Setup Gunicorn
 [How To Set Up Django with Postgres, Nginx, and Gunicorn on Ubuntu 14.04 ](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-14-04#configure-nginx-to-proxy-pass-to-gunicorn)
 
@@ -22,6 +22,9 @@ use `start/stop/restart gunicorn`
 `/var/log/messages`
 
 930 
+
+gunicorn --bind 0.0.0.0:8000 onedrivecloud.wsgi:application
+
 #### /etc/init/gunicorn.conf
 
 ```sh
@@ -31,8 +34,8 @@ start on runlevel [2345]
 stop on runlevel [!2345]
 
 respawn
-#setuid ec2-user
-#setgid www-data
+ #setuid ec2-user
+ #setgid www-data
 
 script
     chdir /home/ec2-user/work/onedrivecloud
@@ -40,10 +43,19 @@ script
     exec gunicorn --workers 3 --bind unix:/home/ec2-user/work/onedrivecloud/onedrivecloud.sock onedrivecloud.wsgi:application
 end script
 ```
+
+
 start gunicorn by:
 `sudo service gunicorn start`
+`sudo initctl start gunicorn`
 
 check `/var/log/messages` for the error info there.
+
+------------------
+# Setup upstart
+[upstart cookbook](http://upstart.ubuntu.com/cookbook/)
+
+--------------------
 
 # Setup Nginx
 
@@ -121,4 +133,6 @@ in `sites-enabled/$$project, to define the server block.
     `/var/log/nginx/error.log`
     `connect() to unix:/home/ec2-user/onedrivecloud/onedrivecloud.sock failed (13: Permission denied) while connecting to upstream`
      -> uncomment user in nginx.conf -> error remains
+     -> change user to ec2-user, error:　 connect() to unix:/home/ec2-user/onedrivecloud/onedrivecloud.sock failed (2: No such file or directory)
+
 

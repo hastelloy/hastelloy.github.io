@@ -19,12 +19,12 @@ defaults:
 description: Life is but a dream
 author:
   name: hzy
-  email: zhongyinghuang@hotmail.com
+  # email: zhongyinghuang@hotmail.com
   # github: dbtek
   # twitter: dbtek
   # pinterest: asd123
   # linkedin: asd123
-  bio: Row, Row, Row your Boat. Life is but a dream.
+  bio: Row, Row, Row your Boat. <br>Life is but a dream.
   email_md5: 726351295ec82e145928582f595aa3aa
 
 rss_path: feed.xml

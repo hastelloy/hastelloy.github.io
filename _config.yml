@@ -19,7 +19,7 @@ defaults:
 description: Life is but a dream
 author:
   name: hzy
-  email: zhongyinghuang@hotmail.com
+  # email: zhongyinghuang@hotmail.com
   # github: dbtek
   # twitter: dbtek
   # pinterest: asd123

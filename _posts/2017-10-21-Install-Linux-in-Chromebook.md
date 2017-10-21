@@ -9,7 +9,7 @@ description: Install Linux in Chromebook Asus C300M
 ---
 
 
-##System Recover
+## System Recover
 
 When you see this error message: __"Chrome OS is missing or damaged"__
 
@@ -22,7 +22,7 @@ ___Note___:
 * __Important__: Try another USB flash driver if it cannot be recognized as a ChromeOS recovery media. 
 
 
-##Flash custom firmware
+## Flash customized firmware
 
 Flash the firmware with the shell script from [John Lewis](http://johnlewis.ie)
 
@@ -41,13 +41,13 @@ Ctrl + D - Develop mode
 Ctrl + L - Legacy mode
 Ctrl + U - Boot with USB
 
-##Install Linux System
+## Install Linux System
 
-####Create Linux live usb disk:
+#### Create Linux live usb disk:
 
 * [etcher](https://etcher.io/)
 * [linux live usb](http://www.linuxliveusb.com/en/download)
-
+ 
 ####OS
 * [GalliumOS](https://galliumos.org/)
 * [Fedora](https://getfedora.org/)
